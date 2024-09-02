@@ -1,30 +1,29 @@
 import  { useState, useEffect } from 'react';
-import axios from 'axios';
+import Header from './Header';
+import Dataapi from '../Apis/dataapi';
+import { Link } from 'react-router-dom';
 
 export default function Card() {
-    const [data, setData] = useState([])
-    
-    useEffect(() => { async function fetchdata() {
-        const response = await axios.get("http://localhost:5000/data")
-        setData(response.data)
+  const [data, setData] = useState([])
+    useEffect(() => {
+    const fd = async () => {
+      const res = await Dataapi();
+      setData(res)
     }
-      fetchdata();
-    }, [])
-
-
-  
-  
-
+    fd();
+  },[])
     
   return (
     <>
-         
+       
          <div className='flex w-full flex-col items-center py-6 md:py-10'>
   <div className='grid hamza grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 w-full'>
     {data.map((painting, i) => (
+      
       <div key={i} className="relative group h-full w-full">
+        <Link to={`/innerpage/${painting.id}`}>
         {/* Image Container */}
-        <div className={`relative h-full w-full group-hover:opacity-80 div${i + 1}`}>
+      <div className={`relative h-full w-full group-hover:opacity-80  div${i + 1}`}>
           <img
             className='object-cover w-full h-full'
             src={painting.images.thumbnail}
@@ -43,6 +42,7 @@ export default function Card() {
             </div>
           </div>
         </div>
+      </Link> 
       </div>
     ))}
   </div>
