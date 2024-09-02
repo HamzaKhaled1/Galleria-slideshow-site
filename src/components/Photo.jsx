@@ -32,7 +32,7 @@ const Photo = () => {
   return (
     <>
       <Link to={`/innerpage/${id}`}>
-        <button className="w-6 h-9 relative right-80 hover:bg-neutral-950 hover:text-white rounded-full">
+              <button className=" relative right-44 md:right-80 hover:bg-neutral-950 hover:text-white rounded-full">
         <FontAwesomeIcon icon={faX} />
         </button>
       </Link>
