@@ -1,4 +1,4 @@
-import logo from '../../../starter-code/assets/shared/logo.svg'
+import logo from '../assets/shared/logo.svg'
 import { Link } from 'react-router-dom';
 function Header() { 
 
