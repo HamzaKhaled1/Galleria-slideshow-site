@@ -10,7 +10,7 @@ import Photo from './components/Photo'
 
     return (
       <>
-     npm run    <BrowserRouter>
+    <BrowserRouter>
           <Header/>
             <Routes>
                 <Route path='/' element={<Card />} />

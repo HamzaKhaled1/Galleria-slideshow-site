@@ -31,21 +31,20 @@ export default function Innerpage() {
     fetchData();
   }, [id]);
 
-  // Log the id and data to debug
+  
   console.log("URL id:", id);
   console.log("Data:", data);
 
-  // If data is not yet loaded, show a loading state
+
   if (!data) {
     return <div>Loading...</div>;
   }
 
-  // Destructure the data to get the necessary properties
+
   const { name, artist, images, description, year } = data;
   const artname = artist.name;
   const artphoto = artist.image;
   const photo = images.hero.large;
-  const smallphoto=images.hero.small
   console.log(`${artname} ${artphoto} ${photo}`);
 
   return (
