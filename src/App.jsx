@@ -1,9 +1,9 @@
 import Header from './components/Header'
 import './App.css'
-import Card from './components/card'
+import Card from './components/Card'
 import Innerpage from './components/innerpage'
 import Error from './components/Error'
-import { createBrowserRouter, BrowserRouter, Route, Routes } from 'react-router-dom'
+import {  BrowserRouter, Route, Routes } from 'react-router-dom'
 import Photo from './components/Photo'
 
   function App() {

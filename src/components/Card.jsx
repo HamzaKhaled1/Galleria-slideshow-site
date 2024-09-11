@@ -1,6 +1,5 @@
 import  { useState, useEffect } from 'react';
-import Header from './Header';
-import Dataapi from '../Apis/dataapi';
+import Dataapi from '../Apis/Dataapi';
 import { Link } from 'react-router-dom';
 
 export default function Card() {

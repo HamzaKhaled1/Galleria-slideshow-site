@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Footer from './footer';
 import open from "../../public/assets/shared/icon-view-image.svg";
 
 export default function Innerpage() {
